@@ -24,7 +24,7 @@ jobs:
           VERSION=${TAG_NAME#v}
           echo "Version is $VERSION"
           dotnet publish -c Release -p:Version=$VERSION -r linux-x64 --self-contained -p:PublishTrimmed=true -p:PublishSingleFile=true -o app/linux-x64
-          dotnet publish -c Release -p:Version=$VERSION -r freebsd-x64 --self-contained -p:PublishTrimmed=true -p:PublishSingleFile=true -o app/freebsd-x64
+          dotnet publish -c Release -p:Version=$VERSION -r freebsd --self-contained -p:PublishTrimmed=true -p:PublishSingleFile=true -o app/freebsd
           dotnet publish -c Release -p:Version=$VERSION -r win-x64 --self-contained -p:PublishTrimmed=true -p:PublishSingleFile=true -o app/win-x64
           dotnet publish -c Release -p:Version=$VERSION -r linux-arm64 --self-contained -p:PublishTrimmed=true -p:PublishSingleFile=true -o app/linux-arm64
           cd app
